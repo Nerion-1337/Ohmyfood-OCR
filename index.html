@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Chemin Pour Style Page -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+
+    <!-- Insertion Scripte JS Executer en Fin de Chargement -->
+    <script defer src="../JS/_map.js" type="module"></script>
+
+    <!-- Icon Barre Navigateur -->
+    <link rel="icon" href="./MEDIA/logo.png" />
+
+    <!-- Import Base de Donnée Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="noreferrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Référencement Google -->
+    <meta
+      name="title"
+      content="Omyfood - Réservez le menu qui vous convient !"
+    />
+    <meta
+      name="description"
+      content="Découvrez des restaurants d'exception, séléctionnés par nos soins."
+    />
+
+    <title>Ohmyfood</title>
+  </head>
+  <body>
+    <header>
+      <h1>ohmyfood</h1>
+    </header>
+    <!-- //
+    //
+    // Partie - 1
+    //
+    // -->
+    <section class="loader">
+      <p>Chargement</p>
+      <div class="load"></div>
+      <div class="load"></div>
+      <div class="load"></div>
+    </section>
+    <!-- //
+    //
+    // Partie - 2
+    //
+    // -->
+    <main>
+      <section class="top_side">
+        <div class="local">
+          <i class="fas fa-map-marker-alt local__icon"></i>
+          <p>Paris, Bellleville</p>
+        </div>
+        <h2>Réservez le menu qui vous convient</h2>
+        <p class="text">
+          Découvrez des restaurants d'exception, séléctionnés par nos soins.
+        </p>
+        <a href="#explorer"> <button>Explorer nos restaurants</button></a>
+      </section>
+      <!-- //
+      //
+      // Partie - 3
+      //
+      // -->
+      <section class="guide">
+        <h3>Fonctionnement</h3>
+        <div class="global_etapes">
+          <div class="etape">
+            <i class="tuto__icon fas fa-mobile-alt"></i>
+            <p>Choisissez un restaurant</p>
+          </div>
+          <div class="etape">
+            <i class="tuto__icon fas fa-list-ul"></i>
+            <p>Composez votre menu</p>
+          </div>
+          <div class="etape">
+            <i class="tuto__icon fas fa-store"></i>
+            <p>Dégustez au restaurant</p>
+          </div>
+        </div>
+      </section>
+      <!-- //
+      //
+      // Partie - 4
+      //
+      // -->
+      <section class="annuaire">
+        <h3 id="explorer">Restaurants</h3>
+        <div class="resto">
+          <article>
+            <a href="./PAGE/la-palette-du-gout.html">
+              <figure>
+                <img
+                  src="MEDIA/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                  alt="Plat succulent"
+                />
+                <span>Nouveau</span>
+              </figure>
+              <div class="figcaption">
+                <div>
+                  <h2 class="card-footer__title">La palette du goût</h2>
+                  <p>Ménilmontant</p>
+                </div>
+                <i class="fa fa-heart"></i>
+              </div>
+            </a>
+          </article>
+
+          <article>
+            <a href="./PAGE/la-note-enchantee.html">
+              <figure>
+                <img
+                  src="MEDIA/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                  alt="Plat succulent"
+                />
+                <span>Nouveau</span>
+              </figure>
+              <div class="figcaption">
+                <div>
+                  <h2 class="card-footer__title">La note enchantée</h2>
+                  <p>Charonne</p>
+                </div>
+                <i class="fa fa-heart"></i>
+              </div>
+            </a>
+          </article>
+
+          <article>
+            <a href="./PAGE/a-la-francaise.html">
+              <figure>
+                <img
+                  src="MEDIA/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                  alt="Plat succulent"
+                />
+                <span>Nouveau</span>
+              </figure>
+              <div class="figcaption">
+                <div>
+                  <h2 class="card-footer__title">À la française</h2>
+                  <p>Cité Rouge</p>
+                </div>
+                <i class="fa fa-heart"></i>
+              </div>
+            </a>
+          </article>
+
+          <article>
+            <a href="./PAGE/le-delice-des-sens.html">
+              <figure>
+                <img
+                  src="MEDIA/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                  alt="Plat succulent"
+                />
+                <span>Nouveau</span>
+              </figure>
+              <div class="figcaption">
+                <div>
+                  <h2 class="card-footer__title">Le délice des sens</h2>
+                  <p>Folie-Méricourt</p>
+                </div>
+                <i class="fa fa-heart"></i>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- //
+      //
+      // Partie - 5
+      //
+      // -->
+    <footer>
+      <h3>ohmyfood</h3>
+      <a href="#"
+        ><i class="footer__icon fas fa-utensils"></i>Proposer un restaurant</a
+      >
+      <a href="#"
+        ><i class="footer__icon fas fa-hands-helping"></i>Devenir partenaire</a
+      >
+      <a href="#">Mentions légales</a>
+      <a href="mailto:contact@ohmyfood.com">Contact</a>
+    </footer>
+  </body>
+</html>

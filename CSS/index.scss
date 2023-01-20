@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+header {
+    position: relative;
+    padding: 2vw;
+    width: 100%;
+    @extend %flexcenter;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+header h1 {
+    font-family: "Shrikhand", "cursive";
+    font-size: 7vw;
+    font-weight: 200;
+}
+//
+//
+// Partie - 1
+//
+//
+.loader{
+    position: fixed;
+    top:0;
+    left:0;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    animation: animate4 0.1s ease-in-out forwards;
+    animation-delay: 3s;
+}
+@keyframes animate4 {
+
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+}
+
+.loader p{
+    position: absolute;
+    font-family: "Shrikhand", "cursive";
+    letter-spacing: 0.2vw;
+    top: 42%;
+    font-size: 5vw;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader .load{
+    height: 4vw;
+    width: 4vw;
+    border-radius: 50%;
+    background: $c1;
+    animation: animate3 1s ease-in-out infinite;
+    @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+            animation-delay: 0.2s * $i;
+        }
+    }
+}
+
+
+//
+//
+// Partie - 2
+//
+//
+main .top_side {
+    @extend %flexcenter;
+    flex-direction: column;
+    background: $c5;
+}
+
+main .top_side .local {
+    @extend %flexcenter;
+    width: 100%;
+    color: $c8;
+    background: $c4;
+    padding: 4vw 6vw 4vw 0vw;
+}
+
+main .top_side .local i {
+    margin-right: 4vw;
+    font-size: 4vw;
+    margin-top: -1vw;
+}
+
+main .top_side .local p {
+    font-weight: 600;
+    font-size: 4vw;
+}
+
+main .top_side h2 {
+    margin-top: 10vw;
+    text-align: center;
+    font-weight: 700;
+    font-size: 6vw;
+    width: 60%;
+}
+main .top_side .text {
+    margin-top: 4vw;
+    text-align: center;
+    width: 80%;
+    color: $c8;
+    font-weight: 350;
+    font-size: 4.5vw;
+}
+
+main .top_side button {
+    margin: 8vw 0 15vw 0;
+    padding: 3.5vw 5vw 3.5vw 5vw;
+    text-align: center;
+    color: white;
+    background: linear-gradient(175deg, $c2, $c1);
+    border-radius: 8vw;
+    border: none;
+    font-size: 4vw;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
+    &:hover {
+        box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.5);
+        filter: brightness(1.25);
+        transform: translateY(-10px);
+    }
+}
+//
+//
+// Partie - 3
+//
+//
+main .guide {
+    padding: 14vw 4vw 10vw 6vw;
+}
+
+main .guide h3 {
+    font-size: 5.8vw;
+}
+main .guide .global_etapes {
+    @extend %flexcenter;
+    flex-direction: column;
+    padding-left: 3vw;
+    gap: 6vw;
+    margin-top: 8vw;
+    counter-reset: etape;
+}
+
+main .guide .global_etapes .etape {
+    position: relative;
+    display: flex;
+    background: $c5;
+    padding: 6.5vw 0vw 6.5vw 0vw;
+    font-size: 4vw;
+    font-weight: 550;
+    border-radius: 5vw;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    &:hover {
+        background: $c6;
+        i {
+            color: $c1;
+        }
+    }
+}
+
+main .guide .global_etapes .etape i {
+    color: gray;
+    font-size: 5vw;
+    margin: 0 5vw 0 8vw;
+}
+
+main .guide .global_etapes .etape::before {
+    counter-increment: etape;
+    content: counter(etape);
+    position: absolute;
+    @extend %flexcenter;
+    left: -3vw;
+    height: 6vw;
+    width: 6vw;
+    background: $c1;
+    border-radius: 50%;
+    color: white;
+    font-size: 3.5vw;
+    font-weight: 300;
+}
+//
+//
+// Partie - 4
+//
+//
+.annuaire {
+    background: $c4;
+    padding: 12vw 6vw 6vw 6vw;
+}
+
+.annuaire h3 {
+    font-size: 6vw;
+    margin: 0 0 5vw 0;
+}
+
+.annuaire .resto {
+    @extend %flexcenter;
+    flex-direction: column;
+    gap: 4vw;
+}
+
+.annuaire .resto article {
+    height: 65vw;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 3vw;
+    background: white;
+    transition: 0.5s;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.annuaire .resto article a {
+    height: 100%;
+    width: 100%;
+}
+
+.annuaire .resto article a figure {
+    position: relative;
+    height: 45vw;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 136, 255);
+}
+
+.annuaire .resto article a figure img {
+    height: 60vw;
+    width: 100%;
+    transform: translateY(-15vw);
+    object-fit: cover;
+}
+
+.annuaire .resto article a figure span {
+    position: absolute;
+    top: 3.5vw;
+    right: 4vw;
+    padding: 1.5vw 3vw;
+    z-index: 2;
+    background: $c3;
+    @extend %flexcenter;
+    font-weight: 500;
+    color: $c9;
+    border-radius: 0.5vw;
+    font-size: 3.5vw;
+}
+
+.annuaire .resto article a .figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vw;
+    padding: 0 5vw 0 3vw;
+    color: black;
+}
+
+.annuaire .resto article a .figcaption h2 {
+    font-size: 4.8vw;
+    font-weight: 750;
+}
+
+.annuaire .resto article a .figcaption p {
+    font-size: 4.5vw;
+    margin-top: 1vw;
+}
+
+.annuaire .resto article a .figcaption i {
+    font-size: 6vw;
+    margin-top: -2vw;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 100;
+    &:hover {
+        font-weight: 600;
+        background: linear-gradient(10deg, $c2, $c1);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+//
+//
+// Partie - 5
+//
+//
+
+footer {
+    background-color: $c8;
+    display: flex;
+    flex-direction: column;
+    padding: 5vw 0 8vw 6vw;
+}
+
+footer h3 {
+    font-family: "Shrikhand", "cursive";
+    font-size: 5vw;
+    font-weight: 100;
+    color: white;
+    margin-bottom: 4vw;
+}
+
+footer a {
+    font-size: 4vw;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 2vw;
+    transition: 0.5s;
+    &:hover {
+        letter-spacing: 0.2em;
+    }
+}
+
+footer a i {
+    font-size: 3vw;
+    font-weight: 100;
+    color: white;
+    margin-right: 3vw;
+}
+
+footer a .fa-hands-helping {
+    margin-right: 2vw;
+}
+
+@media screen and (min-width: 768px) {
+    @import "./index_screen.scss";
+}

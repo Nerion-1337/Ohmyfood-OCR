@@ -1,0 +1,228 @@
+header a {
+    position: absolute;
+    top: 50%;
+    left: 8vw;
+    transform: translate(-50%, -50%);
+    font-size: 4.5vw;
+}
+
+header a i {
+    color: black;
+    padding: 3vw;
+
+    &:hover {
+        animation: animate 2s ease-in-out infinite;
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    50% {
+        transform: translateX(-4vw);
+    }
+
+    100% {
+        transform: translateX(0vw);
+    }
+}
+//
+//
+// Partie - 1
+//
+//
+aside {
+    height: 68vw;
+    width: 100%;
+    overflow: hidden;
+}
+
+aside img {
+    height: 72vw;
+    width: 100%;
+    object-fit: cover;
+}
+//
+//
+// Partie - 2
+//
+//
+.fiche_resto {
+    position: relative;
+    background-color: $c4;
+    width: 100%;
+    padding: 8vw 4vw 8vw 4vw;
+    border-radius: 12.5vw 12.5vw 0 0;
+    margin-top: -11vw;
+}
+
+.fiche_resto h2 {
+    font-family: "Shrikhand", "cursive";
+    font-size: 8vw;
+    font-weight: 200;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 4vw;
+}
+
+.fiche_resto h2 i {
+    font-size: 8vw;
+    margin-top: 1vw;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 100;
+    &:hover {
+        font-weight: 600;
+        background: linear-gradient(10deg, $c2, $c1);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.fiche_resto section {
+    margin-bottom: 12vw;
+}
+
+.fiche_resto section .plats {
+    position: relative;
+    text-transform: uppercase;
+    margin-top: 8vw;
+    margin-bottom: 6vw;
+    font-size: 4.5vw;
+}
+.fiche_resto section .plats::after {
+    content: "";
+    position: absolute;
+    background-color: $c3;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -2vw;
+    height: 0.8vw;
+    width: 11vw;
+}
+
+.fiche_resto section .two {
+    margin-top: 12vw;
+}
+
+.fiche_resto section article {
+    margin-top: 4vw;
+    background: white;
+    border-radius: 4vw;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    opacity: 0;
+    animation: animate3 1s ease-in-out forwards;
+    @for $i from 1 through 13 {
+        &:nth-child(#{$i}) {
+            animation-delay: 0.2s * $i;
+        }
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.fiche_resto section article .description_plat {
+    padding: 3.5vw 4vw 3.5vw 3vw;
+    width: 100%;
+    overflow: hidden;
+}
+
+.fiche_resto section article .description_plat h3 {
+    font-size: 5vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.fiche_resto section article .description_plat p {
+    margin-top: 1vw;
+    font-size: 4vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.fiche_resto section article span {
+    background: white;
+    font-size: 4vw;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    margin: 0vw 4vw 3.5vw 0vw;
+}
+
+.fiche_resto section article .validation_plat {
+    background: $c3;
+    width: 0vw;
+    transition: 0.5s;
+    @extend %flexcenter;
+    overflow: hidden;
+}
+
+.fiche_resto section article:hover .validation_plat {
+    width: 25vw;
+}
+
+.fiche_resto section article .validation_plat i {
+    background: white;
+    color: $c3;
+    border-radius: 50%;
+    padding: 1vw;
+    font-size: 4vw;
+}
+
+.fiche_resto section article:hover .validation_plat i {
+    animation: animate2 0.5s ease-in-out forwards;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(-240deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.fiche_resto .button_commande {
+    @extend %flexcenter;
+}
+
+.fiche_resto .button_commande button {
+    margin: 0vw 0 10vw 0;
+    padding: 3.5vw 12vw 3.5vw 12vw;
+    text-align: center;
+    color: white;
+    background: linear-gradient(175deg, $c2, $c1);
+    border-radius: 8vw;
+    border: none;
+    font-size: 4vw;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
+    &:hover {
+        box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.5);
+        filter: brightness(1.25);
+        transform: translateY(-10px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    @import "./page_screen.scss";
+}
