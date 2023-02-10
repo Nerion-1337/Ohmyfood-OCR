@@ -191,7 +191,7 @@ main .top_side .text {
   font-size: 4.5vw;
 }
 
-main .top_side button {
+main .top_side a {
   margin: 8vw 0 15vw 0;
   padding: 3.5vw 5vw 3.5vw 5vw;
   text-align: center;
@@ -203,7 +203,7 @@ main .top_side button {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   transition: 0.5s;
 }
-main .top_side button:hover {
+main .top_side a:hover {
   box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.5);
   filter: brightness(1.25);
   transform: translateY(-10px);
@@ -397,7 +397,7 @@ footer a .fa-hands-helping {
 
 @media screen and (min-width: 768px) {
   @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-  header {
+header {
     position: relative;
     padding: 2vw;
     width: 100%;
@@ -523,7 +523,7 @@ footer a .fa-hands-helping {
     font-weight: 350;
     font-size: 2.25vw;
   }
-  main .top_side button {
+  main .top_side a {
     margin: 4vw 0 7.5vw 0;
     padding: 1.75vw 2.5vw 1.75vw 2.5vw;
     text-align: center;
@@ -536,7 +536,7 @@ footer a .fa-hands-helping {
     transition: 0.5s;
     cursor: pointer;
   }
-  main .top_side button:hover {
+  main .top_side a:hover {
     box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.5);
     filter: brightness(1.25);
     transform: translateY(-10px);
