@@ -260,6 +260,7 @@ main .guide .global_etapes .etape::before {
 }
 
 .annuaire .resto article a .figcaption {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -280,19 +281,30 @@ main .guide .global_etapes .etape::before {
 }
 
 .annuaire .resto article a .figcaption i {
-    content: "";
     font-size: 3vw;
     margin-top: -1vw;
     color: rgba(0, 0, 0, 0.5);
     font-weight: 100;
-    &:hover {
-        font-weight: 600;
-        background: linear-gradient(10deg, $c2, $c1);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    &:hover::after {
+        transform: scale(1);
     }
 }
+
+.annuaire .resto article a .figcaption i::after {
+    content: "\f004";
+    position: absolute;
+    font-size: 3vw;
+    right: 2.5vw;
+     font-weight: 700;
+     background: linear-gradient(10deg, $c2, $c1);
+    background-clip: text;
+    -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     transform: scale(0);
+     transition: .5s;
+
+}
+
 //
 //
 // Partie - 4

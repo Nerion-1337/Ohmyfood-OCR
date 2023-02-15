@@ -350,12 +350,22 @@ main .guide .global_etapes .etape::before {
   color: rgba(0, 0, 0, 0.5);
   font-weight: 100;
 }
-.annuaire .resto article a .figcaption i:hover {
-  font-weight: 600;
+.annuaire .resto article a .figcaption i:hover::after {
+  transform: scale(1);
+}
+
+.annuaire .resto article a .figcaption i::after {
+  content: "\f004";
+  position: absolute;
+  font-size: 6vw;
+  right: 5vw;
+  font-weight: 700;
   background: linear-gradient(10deg, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transform: scale(0);
+  transition: 0.5s;
 }
 
 footer {
@@ -397,7 +407,7 @@ footer a .fa-hands-helping {
 
 @media screen and (min-width: 768px) {
   @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-header {
+  header {
     position: relative;
     padding: 2vw;
     width: 100%;
@@ -640,6 +650,7 @@ header {
     font-size: 1.75vw;
   }
   .annuaire .resto article a .figcaption {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -657,18 +668,26 @@ header {
     margin-top: 0.5vw;
   }
   .annuaire .resto article a .figcaption i {
-    content: "";
     font-size: 3vw;
     margin-top: -1vw;
     color: rgba(0, 0, 0, 0.5);
     font-weight: 100;
   }
-  .annuaire .resto article a .figcaption i:hover {
-    font-weight: 600;
+  .annuaire .resto article a .figcaption i:hover::after {
+    transform: scale(1);
+  }
+  .annuaire .resto article a .figcaption i::after {
+    content: "\f004";
+    position: absolute;
+    font-size: 3vw;
+    right: 2.5vw;
+    font-weight: 700;
     background: linear-gradient(10deg, #FF79DA, #9356DC);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transform: scale(0);
+    transition: 0.5s;
   }
   footer {
     background-color: #3E3E3E;
@@ -768,12 +787,22 @@ aside img {
   color: rgba(0, 0, 0, 0.5);
   font-weight: 100;
 }
-.fiche_resto h2 i:hover {
-  font-weight: 600;
+.fiche_resto h2 i:hover::after {
+  transform: scale(1);
+}
+
+.fiche_resto h2 i::after {
+  content: "\f004";
+  position: absolute;
+  font-size: 8vw;
+  right: 8vw;
+  font-weight: 700;
   background: linear-gradient(10deg, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transform: scale(0);
+  transition: 0.5s;
 }
 
 .fiche_resto section {
@@ -1006,12 +1035,21 @@ aside img {
     color: rgba(0, 0, 0, 0.5);
     font-weight: 100;
   }
-  .fiche_resto h2 i:hover {
-    font-weight: 600;
+  .fiche_resto h2 i:hover::after {
+    transform: scale(1);
+  }
+  .fiche_resto h2 i::after {
+    content: "\f004";
+    position: absolute;
+    font-size: 4vw;
+    right: 6vw;
+    font-weight: 700;
     background: linear-gradient(10deg, #FF79DA, #9356DC);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transform: scale(0);
+    transition: 0.5s;
   }
   .fiche_resto section {
     margin-bottom: 4vw;

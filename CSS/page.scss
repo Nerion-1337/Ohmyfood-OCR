@@ -73,13 +73,23 @@ aside img {
     margin-top: 1vw;
     color: rgba(0, 0, 0, 0.5);
     font-weight: 100;
-    &:hover {
-        font-weight: 600;
-        background: linear-gradient(10deg, $c2, $c1);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    &:hover::after {
+        transform: scale(1);
     }
+}
+
+.fiche_resto h2 i::after {
+    content: "\f004";
+    position: absolute;
+    font-size: 8vw;
+    right: 8vw;
+    font-weight: 700;
+    background: linear-gradient(10deg, $c2, $c1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(0);
+    transition: 0.5s;
 }
 
 .fiche_resto section {

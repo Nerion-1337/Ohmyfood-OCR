@@ -19,10 +19,10 @@ header h1 {
 // Partie - 1
 //
 //
-.loader{
+.loader {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     background: transparent;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -37,19 +37,17 @@ header h1 {
     animation-delay: 3s;
 }
 @keyframes animate4 {
-
-    0%{
+    0% {
         opacity: 1;
     }
 
-    100%{
+    100% {
         opacity: 0;
         visibility: hidden;
     }
-    
 }
 
-.loader p{
+.loader p {
     position: absolute;
     font-family: "Shrikhand", "cursive";
     letter-spacing: 0.2vw;
@@ -61,7 +59,7 @@ header h1 {
     justify-content: center;
 }
 
-.loader .load{
+.loader .load {
     height: 4vw;
     width: 4vw;
     border-radius: 50%;
@@ -73,7 +71,6 @@ header h1 {
         }
     }
 }
-
 
 //
 //
@@ -290,13 +287,23 @@ main .guide .global_etapes .etape::before {
     margin-top: -2vw;
     color: rgba(0, 0, 0, 0.5);
     font-weight: 100;
-    &:hover {
-        font-weight: 600;
-        background: linear-gradient(10deg, $c2, $c1);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    &:hover::after {
+        transform: scale(1);
     }
+}
+
+.annuaire .resto article a .figcaption i::after {
+    content: "\f004";
+    position: absolute;
+    font-size: 6vw;
+    right: 5vw;
+    font-weight: 700;
+    background: linear-gradient(10deg, $c2, $c1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(0);
+    transition: 0.5s;
 }
 //
 //
