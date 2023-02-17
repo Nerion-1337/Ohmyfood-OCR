@@ -13,7 +13,12 @@ Langage solicité:
 - Site responsive
 - Semblable à la maquette version mobile.
 
+# Visiter
 
+[Voir le Rendu]( https://nerion-1337.github.io/ohmyfood-OCR/)
+
+
+# Aperçu
 ![screenshot du site](./0-Order-Mission/screen/ohmyfood.png)
 
 
