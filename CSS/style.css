@@ -406,7 +406,6 @@ footer a .fa-hands-helping {
 }
 
 @media screen and (min-width: 768px) {
-  @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
   header {
     position: relative;
     padding: 2vw;
