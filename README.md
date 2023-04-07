@@ -15,7 +15,7 @@ Langage solicité:
 
 # Visiter
 
-[Voir le Rendu]( https://nerion-1337.github.io/ohmyfood-OCR/)
+[Voir le Rendu]( https://nerion-1337.github.io/Ohmyfood-OCR/)
 
 
 # Aperçu
