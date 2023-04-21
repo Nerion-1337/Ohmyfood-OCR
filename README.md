@@ -15,11 +15,11 @@ Langage solicité:
 
 # Maquette
 
-[Canevas]( [https://nerion-1337.github.io/Ohmyfood-OCR/](https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Maquettes-Ohmyfood-(mobile-et-desktop)?node-id=0-1&t=b5oCb7bLm2NDdMKl-0))
+[Canevas](https://nerion-1337.github.io/Ohmyfood-OCR/](https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Maquettes-Ohmyfood-(mobile-et-desktop)?node-id=0-1&t=b5oCb7bLm2NDdMKl-0)
 
 # Visiter
 
-[Voir le Rendu]( https://nerion-1337.github.io/Ohmyfood-OCR/)
+[Voir le Rendu](https://nerion-1337.github.io/Ohmyfood-OCR/)
 
 
 # Aperçu
