@@ -15,7 +15,7 @@ Langage solicité:
 
 # Maquette
 
-[Canevas](https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Projet-3-FR---Ohmyfood?node-id=0%3A1)
+[Figma](https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Projet-3-FR---Ohmyfood?node-id=0%3A1)
 
 # Visiter
 
